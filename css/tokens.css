@@ -84,6 +84,32 @@
   --color-code-punct: #7b8592;
   --color-code-meta: #7a8593;
 
+  /* Project mockups — fixed palettes of the real sites, same in both themes */
+  --mock-dot: #566170;
+  --mock-accent: #4b94ff;
+  --mock-chart: linear-gradient(to top, #2e6fd0, #6ea8ff);
+  --mock-dark-bg: #0b1017;
+  --mock-dark-text: #f3f6fa;
+  --mock-dark-border: rgba(255, 255, 255, 0.12);
+  --mock-dark-divider: rgba(255, 255, 255, 0.08);
+  --mock-dark-block: rgba(255, 255, 255, 0.07);
+  --mock-dark-badge-bg: rgba(0, 0, 0, 0.35);
+  --mock-dark-badge-border: rgba(255, 255, 255, 0.16);
+  --mock-light-border: rgba(0, 0, 0, 0.1);
+  --mock-light-divider: rgba(0, 0, 0, 0.08);
+  --mock-light-badge-bg: rgba(255, 255, 255, 0.75);
+  --mock-light-badge-text: #182333;
+  --mock-laro-media: linear-gradient(145deg, #101722, #080c12);
+  --mock-finbox-media: linear-gradient(145deg, #111a25, #091016);
+  --mock-rentkit-media: linear-gradient(145deg, #edf4ff, #d7e7ff);
+  --mock-rentkit-bg: #f9fbff;
+  --mock-rentkit-text: #17202c;
+  --mock-rentkit-block: #e2ebf8;
+  --mock-foodly-media: linear-gradient(145deg, #f7f2e9, #e7eee4);
+  --mock-foodly-bg: #fffdf8;
+  --mock-foodly-text: #24241f;
+  --mock-foodly-block: #e6ece2;
+
   /* Effects */
   --blur-glass: 18px;
 
