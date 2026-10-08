@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components/header.css">
   <link rel="stylesheet" href="css/components/button.css">
+  <link rel="stylesheet" href="css/components/hero.css">
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="js/main.js"></script>
 </head>
@@ -48,31 +49,31 @@
 
 <main id="top">
 <section class="hero section">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow"><span class="status-dot"></span> Available for agency collaboration</p>
-      <h1>Frontend development<br><span>for digital agencies.</span></h1>
-      <p class="hero-text">I help agencies turn designs and ideas into clean, responsive, production-ready websites — as an external frontend or WordPress developer.</p>
-      <div class="hero-actions">
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow"><span class="hero__status-dot"></span> Available for agency collaboration</p>
+      <h1 class="hero__title">Frontend development<br><span class="hero__title-accent">for digital agencies.</span></h1>
+      <p class="hero__text">I help agencies turn designs and ideas into clean, responsive, production-ready websites — as an external frontend or WordPress developer.</p>
+      <div class="hero__actions">
         <a class="button button--primary" href="#work">View selected work <span aria-hidden="true">↓</span></a>
         <a class="button button--secondary" href="#contact">Start a conversation <span aria-hidden="true">↗</span></a>
       </div>
-      <div class="tech-line"><span>HTML</span><i>·</i><span>CSS</span><i>·</i><span>JavaScript</span><i>·</i><span>Tailwind</span><i>·</i><span>WordPress</span></div>
+      <div class="hero__tech"><span>HTML</span><span class="hero__tech-separator" aria-hidden="true">·</span><span>CSS</span><span class="hero__tech-separator" aria-hidden="true">·</span><span>JavaScript</span><span class="hero__tech-separator" aria-hidden="true">·</span><span>Tailwind</span><span class="hero__tech-separator" aria-hidden="true">·</span><span>WordPress</span></div>
     </div>
 
-    <div class="hero-visual" aria-hidden="true">
-      <div class="orb orb-one"></div><div class="orb orb-two"></div><div class="visual-grid"></div>
-      <div class="code-card">
-        <div class="window-bar"><span></span><span></span><span></span></div>
-        <div class="code-lines">
-          <b class="c-blue">.agency-project</b> <em>{</em>
-          <p><span class="c-muted">display</span>: <span class="c-white">grid</span>;</p>
-          <p><span class="c-muted">responsive</span>: <span class="c-white">true</span>;</p>
-          <p><span class="c-muted">quality</span>: <span class="c-white">high</span>;</p>
-          <p><span class="c-muted">workflow</span>: <span class="c-blue">"yours"</span>;</p>
-          <em>}</em>
+    <div class="hero__visual" aria-hidden="true">
+      <div class="hero__orb hero__orb--large"></div><div class="hero__orb hero__orb--small"></div><div class="hero__grid-lines"></div>
+      <div class="hero__code">
+        <div class="hero__code-bar"><span class="hero__code-dot"></span><span class="hero__code-dot"></span><span class="hero__code-dot"></span></div>
+        <div class="hero__code-body">
+          <span class="hero__code-selector">.agency-project</span> <span class="hero__code-punct">{</span>
+          <p class="hero__code-line"><span class="hero__code-token hero__code-token--key">display</span>: <span class="hero__code-token hero__code-token--value">grid</span>;</p>
+          <p class="hero__code-line"><span class="hero__code-token hero__code-token--key">responsive</span>: <span class="hero__code-token hero__code-token--value">true</span>;</p>
+          <p class="hero__code-line"><span class="hero__code-token hero__code-token--key">quality</span>: <span class="hero__code-token hero__code-token--value">high</span>;</p>
+          <p class="hero__code-line"><span class="hero__code-token hero__code-token--key">workflow</span>: <span class="hero__code-token hero__code-token--accent">"yours"</span>;</p>
+          <span class="hero__code-punct">}</span>
         </div>
-        <div class="code-footer"><span>frontend / wordpress</span><span>ready</span></div>
+        <div class="hero__code-footer"><span>frontend / wordpress</span><span>ready</span></div>
       </div>
     </div>
   </div>
