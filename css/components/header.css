@@ -1,0 +1,80 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  min-height: var(--header-height);
+  border-bottom: var(--border-width) solid var(--color-line);
+  background: var(--color-header-bg);
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  backdrop-filter: blur(var(--blur-glass));
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-l);
+}
+
+.header__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--text-s);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+}
+
+.header__brand-mark {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: var(--border-width) solid var(--color-line-strong);
+  border-radius: var(--radius-s);
+  background: var(--gradient-brand-mark);
+  color: var(--color-accent);
+  font-size: var(--text-xs);
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-m);
+  list-style: none;
+}
+
+/* Mobile: only GitHub fits — the burger menu replaces this in the next stage */
+.header__item:not(.header__item--github) {
+  display: none;
+}
+
+.header__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  min-height: 2.25rem; /* 36 — touch target ≥ 24px */
+  color: var(--color-text-muted);
+  font-size: var(--text-s);
+}
+
+.header__link--github {
+  padding-inline: var(--space-xs);
+  border: var(--border-width) solid var(--color-line);
+  border-radius: var(--radius-s);
+  color: var(--color-text);
+}
+
+@media (min-width: 768px) {
+  .header__item:not(.header__item--github) {
+    display: list-item;
+  }
+}
+
+@media (hover: hover) {
+  .header__link:hover {
+    color: var(--color-text);
+  }
+}
