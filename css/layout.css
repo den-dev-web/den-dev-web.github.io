@@ -1,0 +1,31 @@
+.container {
+  width: min(100% - var(--container-gutter) * 2, var(--container-max));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--space-section);
+}
+
+.section--bordered {
+  border-top: var(--border-width) solid var(--color-line);
+}
+
+/* Hidden above the viewport until it receives keyboard focus */
+.skip-link {
+  position: absolute;
+  top: var(--space-2xs);
+  left: var(--space-2xs);
+  z-index: 100;
+  padding: var(--space-xs) var(--space-s);
+  border-radius: var(--radius-s);
+  background: var(--color-text);
+  color: var(--color-bg);
+  font-size: var(--text-s);
+  font-weight: var(--font-weight-bold);
+  transform: translateY(calc(-100% - var(--space-2xs) * 2));
+}
+
+.skip-link:focus {
+  transform: none;
+}
