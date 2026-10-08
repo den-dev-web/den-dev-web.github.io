@@ -63,6 +63,11 @@
   --color-line: rgba(255, 255, 255, 0.09);
   --color-line-strong: rgba(255, 255, 255, 0.15);
   --color-line-hover: rgba(255, 255, 255, 0.28);
+  --color-header-bg: rgba(8, 11, 16, 0.76);
+  --gradient-brand-mark: linear-gradient(145deg, #172334, #0c121a);
+
+  /* Effects */
+  --blur-glass: 18px;
 
   /* Spacing, 4px step */
   --space-3xs: 0.25rem; /* 4 */
