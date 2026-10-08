@@ -8,6 +8,4 @@ body{margin:0;background:radial-gradient(circle at 75% 4%,rgba(63,140,255,.09),t
 body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to bottom,black,transparent 80%)}
 a{color:inherit;text-decoration:none}
 h1,h2,h3,p{margin-top:0}
-.site-footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted-2);font-size:10px}.footer-inner{display:flex;justify-content:space-between;gap:20px}
-@media(max-width:680px){.footer-inner{flex-direction:column}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

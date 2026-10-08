@@ -1,0 +1,20 @@
+.footer {
+  padding-block: var(--space-m);
+  border-top: var(--border-width) solid var(--color-line);
+  color: var(--color-text-subtle);
+  font-size: var(--text-xs);
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+@media (min-width: 768px) {
+  .footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--space-m);
+  }
+}
