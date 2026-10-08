@@ -70,7 +70,9 @@
 
   /* Accent glow: rgb(var(--glow-rgb) / alpha); glow elements fade by --glow-opacity */
   --glow-rgb: 63 140 255;
+  --glow-slate-rgb: 70 100 145;
   --glow-opacity: 1;
+  --color-grid-line: rgba(255, 255, 255, 0.025);
 
   /* Code card — stays dark in both themes */
   --color-code-bg: rgba(12, 17, 24, 0.91);
@@ -173,6 +175,7 @@
     --gradient-brand-mark: linear-gradient(145deg, #ffffff, #e9eef6);
     --color-success-glow: rgba(31, 143, 78, 0.35);
     --glow-opacity: 0.5;
+    --color-grid-line: rgba(11, 18, 32, 0.06);
   }
 }
 
@@ -195,4 +198,5 @@
   --gradient-brand-mark: linear-gradient(145deg, #ffffff, #e9eef6);
   --color-success-glow: rgba(31, 143, 78, 0.35);
   --glow-opacity: 0.5;
+  --color-grid-line: rgba(11, 18, 32, 0.06);
 }
