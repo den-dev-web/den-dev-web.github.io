@@ -79,19 +79,6 @@
   box-shadow: var(--shadow-m);
 }
 
-/* Variant B: real screenshot in the same frame as the mockup, cropped from the top */
-.project-card__shot {
-  position: absolute;
-  inset: var(--inset-top) var(--inset-x) var(--space-m);
-  width: calc(100% - 2 * var(--inset-x));
-  height: calc(100% - var(--inset-top) - var(--space-m));
-  border: var(--border-width) solid var(--screen-border);
-  border-radius: var(--radius-m);
-  box-shadow: var(--shadow-m);
-  object-fit: cover;
-  object-position: top;
-}
-
 .project-card__screen-bar {
   display: flex;
   align-items: center;
@@ -250,15 +237,13 @@
     border-color: var(--color-line-strong);
   }
 
-  .project-card__media:hover .project-card__screen,
-  .project-card__media:hover .project-card__shot {
+  .project-card__media:hover .project-card__screen {
     transform: translateY(-6px);
   }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .project-card__screen,
-  .project-card__shot {
+  .project-card__screen {
     transition: transform var(--duration-base) var(--ease-standard);
   }
 }
