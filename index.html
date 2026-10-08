@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/components/header.css">
   <link rel="stylesheet" href="css/components/button.css">
   <link rel="stylesheet" href="css/components/eyebrow.css">
+  <link rel="stylesheet" href="css/components/section-heading.css">
   <link rel="stylesheet" href="css/components/hero.css">
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="js/main.js"></script>
@@ -84,8 +85,8 @@
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">Development support</p>
-      <h2>Extra capacity when your team needs it.</h2>
-      <p>I can plug into an existing agency workflow and take ownership of implementation work.</p>
+      <h2 class="section-heading__title">Extra capacity when your team needs it.</h2>
+      <p class="section-heading__text">I can plug into an existing agency workflow and take ownership of implementation work.</p>
     </div>
     <div class="service-grid">
       <article class="service-card"><span class="service-number">01</span><h3>Frontend Development</h3><p>Responsive interfaces built from Figma, design systems or existing websites.</p><ul><li>HTML / CSS / JavaScript</li><li>Responsive & mobile-first</li><li>Interactions & UI states</li><li>Accessibility & performance</li></ul></article>
@@ -97,9 +98,9 @@
 
 <section id="work" class="section">
   <div class="container">
-    <div class="section-heading work-heading">
-      <div><p class="eyebrow">Selected work</p><h2>Built to show how I work.</h2></div>
-      <a class="text-link" href="https://github.com/den-dev-web" target="_blank" rel="noreferrer">View GitHub ↗</a>
+    <div class="section-heading section-heading--split">
+      <div><p class="eyebrow">Selected work</p><h2 class="section-heading__title">Built to show how I work.</h2></div>
+      <a class="section-heading__link" href="https://github.com/den-dev-web" target="_blank" rel="noreferrer">View GitHub <span aria-hidden="true">↗</span></a>
     </div>
 
     <div class="project-grid">
@@ -140,7 +141,7 @@
 
 <section id="process" class="section section--bordered">
   <div class="container process-grid">
-    <div class="section-heading"><p class="eyebrow">Agency workflow</p><h2>Your client.<br>Your workflow.</h2><p>I work as an extension of your team, not as another layer between you and the client.</p></div>
+    <div class="section-heading"><p class="eyebrow">Agency workflow</p><h2 class="section-heading__title">Your client.<br>Your workflow.</h2><p class="section-heading__text">I work as an extension of your team, not as another layer between you and the client.</p></div>
     <div class="process-list">
       <div class="process-item"><span>01</span><div><h3>You provide the design</h3><p>Figma, design system, existing website or project requirements.</p></div></div>
       <div class="process-item"><span>02</span><div><h3>I handle implementation</h3><p>Frontend, WordPress, responsive behaviour and required interactions.</p></div></div>
@@ -166,7 +167,7 @@
 
 <section class="section stack">
   <div class="container">
-    <div class="section-heading"><p class="eyebrow">Tools I work with</p><h2>A practical, frontend-first stack.</h2></div>
+    <div class="section-heading"><p class="eyebrow">Tools I work with</p><h2 class="section-heading__title">A practical, frontend-first stack.</h2></div>
     <div class="stack-grid">
       <div><strong>Frontend</strong><span>HTML5 · CSS3 · JavaScript · TypeScript · Tailwind CSS · Bootstrap · Vue</span></div>
       <div><strong>CMS & Commerce</strong><span>WordPress · WooCommerce · OpenCart</span></div>
