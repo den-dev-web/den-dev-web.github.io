@@ -14,8 +14,7 @@
 .header__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-l);
+  gap: var(--space-xs);
 }
 
 .header__brand {
@@ -25,6 +24,7 @@
   font-size: var(--text-s);
   font-weight: var(--font-weight-bold);
   letter-spacing: -0.02em;
+  margin-right: auto;
 }
 
 .header__brand-mark {
@@ -39,7 +39,8 @@
   font-size: var(--text-xs);
 }
 
-/* Burger button — mobile only */
+/* Icon buttons: theme switch and mobile burger */
+.header__theme,
 .header__toggle {
   display: inline-grid;
   place-content: center;
@@ -49,6 +50,29 @@
   border: var(--border-width) solid var(--color-line);
   border-radius: var(--radius-s);
   color: var(--color-text);
+}
+
+/* Icon shows the theme a click switches to: sun in dark, moon in light */
+.header__theme-icon--moon {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .header__theme-icon--sun {
+    display: none;
+  }
+
+  :root:not([data-theme="dark"]) .header__theme-icon--moon {
+    display: block;
+  }
+}
+
+:root[data-theme="light"] .header__theme-icon--sun {
+  display: none;
+}
+
+:root[data-theme="light"] .header__theme-icon--moon {
+  display: block;
 }
 
 .header__toggle-line {
@@ -112,8 +136,19 @@
 }
 
 @media (min-width: 768px) {
+  .header__inner {
+    gap: var(--space-m);
+  }
+
   .header__toggle {
     display: none;
+  }
+
+  /* After the menu on desktop; before the burger in DOM so mobile focus order stays logical */
+  .header__theme {
+    order: 1;
+    width: 2.25rem;
+    height: 2.25rem;
   }
 
   .header__nav {
@@ -138,6 +173,11 @@
 @media (hover: hover) {
   .header__link:hover {
     color: var(--color-text);
+  }
+
+  .header__theme:hover,
+  .header__toggle:hover {
+    border-color: var(--color-line-hover);
   }
 }
 
