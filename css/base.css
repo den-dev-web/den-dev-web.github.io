@@ -22,6 +22,9 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6; /* project value — see passport Deviations */
+  /* Long words wrap everywhere; `anywhere` also lets grid/flex items shrink below the word width. Safari < 15.4 keeps `break-word` */
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -63,14 +66,4 @@ button {
   cursor: pointer;
   border: none;
   background: none;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
 }
