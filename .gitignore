@@ -1,0 +1,5 @@
+# Never commit
+node_modules/
+.env
+*.log
+.claude/settings.local.json
