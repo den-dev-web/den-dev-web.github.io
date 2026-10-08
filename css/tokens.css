@@ -66,6 +66,23 @@
   --color-line-hover: rgba(255, 255, 255, 0.28);
   --color-header-bg: rgba(8, 11, 16, 0.76);
   --gradient-brand-mark: linear-gradient(145deg, #172334, #0c121a);
+  --color-success-glow: rgba(105, 211, 145, 0.6);
+
+  /* Accent glow: rgb(var(--glow-rgb) / alpha); glow elements fade by --glow-opacity */
+  --glow-rgb: 63 140 255;
+  --glow-opacity: 1;
+
+  /* Code card — stays dark in both themes */
+  --color-code-bg: rgba(12, 17, 24, 0.91);
+  --color-code-border: rgba(255, 255, 255, 0.15);
+  --color-code-line: rgba(255, 255, 255, 0.09);
+  --color-code-dot: #303945;
+  --color-code-text: #9aa6b5;
+  --color-code-key: #7c8796;
+  --color-code-value: #e8edf4;
+  --color-code-accent: #78aeff;
+  --color-code-punct: #7b8592;
+  --color-code-meta: #7a8593;
 
   /* Effects */
   --blur-glass: 18px;
@@ -128,6 +145,8 @@
     --color-line-hover: rgba(11, 18, 32, 0.28);
     --color-header-bg: rgba(246, 248, 251, 0.8);
     --gradient-brand-mark: linear-gradient(145deg, #ffffff, #e9eef6);
+    --color-success-glow: rgba(31, 143, 78, 0.35);
+    --glow-opacity: 0.5;
   }
 }
 
@@ -148,4 +167,6 @@
   --color-line-hover: rgba(11, 18, 32, 0.28);
   --color-header-bg: rgba(246, 248, 251, 0.8);
   --gradient-brand-mark: linear-gradient(145deg, #ffffff, #e9eef6);
+  --color-success-glow: rgba(31, 143, 78, 0.35);
+  --glow-opacity: 0.5;
 }
