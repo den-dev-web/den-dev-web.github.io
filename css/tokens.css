@@ -80,11 +80,11 @@
   --color-code-line: rgba(255, 255, 255, 0.09);
   --color-code-dot: #303945;
   --color-code-text: #9aa6b5;
-  --color-code-key: #7c8796;
+  --color-code-key: #858f9d;
   --color-code-value: #e8edf4;
   --color-code-accent: #78aeff;
-  --color-code-punct: #7b8592;
-  --color-code-meta: #7a8593;
+  --color-code-punct: #868f9b;
+  --color-code-meta: #858f9c;
 
   /* Project mockups — fixed palettes of the real sites, same in both themes */
   --mock-dot: #566170;
