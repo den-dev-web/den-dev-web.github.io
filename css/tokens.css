@@ -101,4 +101,5 @@
   /* Layout */
   --container-max: 1280px;
   --container-gutter: clamp(1rem, 0.825rem + 0.875vw, 1.875rem);
+  --header-height: 4.5rem; /* 72 — sticky header */
 }

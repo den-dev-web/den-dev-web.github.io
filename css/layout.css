@@ -1,3 +1,8 @@
+/* Anchor targets land below the sticky header */
+html {
+  scroll-padding-top: var(--header-height);
+}
+
 .container {
   width: min(100% - var(--container-gutter) * 2, var(--container-max));
   margin-inline: auto;
