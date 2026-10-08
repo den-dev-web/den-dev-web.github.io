@@ -50,7 +50,8 @@
   --text-4xl: clamp(2.5rem, 1.979rem + 2.604vw, 4.062rem);     /* 40 → 65 */
   --text-5xl: clamp(2.625rem, 1.917rem + 3.542vw, 4.75rem);    /* 42 → 76 */
 
-  /* Colors — dark theme */
+  /* Colors — dark theme (default) */
+  color-scheme: dark;
   --color-bg: #080b10;
   --color-bg-soft: #0d1118;
   --color-surface: #10151d;
@@ -107,4 +108,44 @@
   --container-max: 1280px;
   --container-gutter: clamp(1rem, 0.825rem + 0.875vw, 1.875rem);
   --header-height: 4.5rem; /* 72 — sticky header */
+}
+
+/* Colors — light theme: follows the OS unless the visitor picked dark in the header toggle */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --color-bg: #f6f8fb;
+    --color-bg-soft: #eef2f7;
+    --color-surface: #ffffff;
+    --color-surface-raised: #eaf0f8;
+    --color-text: #0b1220;
+    --color-text-muted: #465263;
+    --color-text-subtle: #5b6778;
+    --color-accent: #1f5fc4;
+    --color-success: #1f8f4e;
+    --color-line: rgba(11, 18, 32, 0.1);
+    --color-line-strong: rgba(11, 18, 32, 0.16);
+    --color-line-hover: rgba(11, 18, 32, 0.28);
+    --color-header-bg: rgba(246, 248, 251, 0.8);
+    --gradient-brand-mark: linear-gradient(145deg, #ffffff, #e9eef6);
+  }
+}
+
+/* Colors — light theme picked manually in the header toggle */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-bg: #f6f8fb;
+  --color-bg-soft: #eef2f7;
+  --color-surface: #ffffff;
+  --color-surface-raised: #eaf0f8;
+  --color-text: #0b1220;
+  --color-text-muted: #465263;
+  --color-text-subtle: #5b6778;
+  --color-accent: #1f5fc4;
+  --color-success: #1f8f4e;
+  --color-line: rgba(11, 18, 32, 0.1);
+  --color-line-strong: rgba(11, 18, 32, 0.16);
+  --color-line-hover: rgba(11, 18, 32, 0.28);
+  --color-header-bg: rgba(246, 248, 251, 0.8);
+  --gradient-brand-mark: linear-gradient(145deg, #ffffff, #e9eef6);
 }
