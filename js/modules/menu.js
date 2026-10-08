@@ -17,6 +17,12 @@ export default function initMenu() {
     if (event.target.closest("a")) setOpen(false);
   });
 
+  document.addEventListener("click", (event) => {
+    if (!menu.classList.contains("is-open")) return;
+    if (menu.contains(event.target) || button.contains(event.target)) return;
+    setOpen(false);
+  });
+
   document.addEventListener("keydown", (event) => {
     if (event.key !== "Escape" || !menu.classList.contains("is-open")) return;
     setOpen(false);
