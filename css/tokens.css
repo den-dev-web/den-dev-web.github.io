@@ -1,0 +1,202 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter-latin-600-normal.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter-latin-800-normal.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Fonts */
+  --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: var(--font-body);
+  --font-mono: "SFMono-Regular", Consolas, monospace;
+
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Fluid type scale, 320px → 1280px; minimum 12px */
+  --text-xs: clamp(0.75rem, 0.7292rem + 0.1042vw, 0.8125rem);  /* 12 → 13 */
+  --text-s: clamp(0.8125rem, 0.7917rem + 0.1042vw, 0.875rem);  /* 13 → 14 */
+  --text-base: clamp(0.9375rem, 0.9167rem + 0.1042vw, 1rem);   /* 15 → 16 */
+  --text-m: clamp(1rem, 0.9583rem + 0.2083vw, 1.125rem);       /* 16 → 18 */
+  --text-l: clamp(1.125rem, 1.042rem + 0.4167vw, 1.375rem);    /* 18 → 22 */
+  --text-xl: clamp(1.25rem, 1.167rem + 0.4167vw, 1.5rem);      /* 20 → 24 */
+  --text-2xl: clamp(1.688rem, 1.354rem + 1.667vw, 2.688rem);   /* 27 → 43 */
+  --text-3xl: clamp(2rem, 1.583rem + 2.083vw, 3.25rem);        /* 32 → 52 */
+  --text-4xl: clamp(2.5rem, 1.979rem + 2.604vw, 4.062rem);     /* 40 → 65 */
+  --text-5xl: clamp(2.625rem, 1.917rem + 3.542vw, 4.75rem);    /* 42 → 76 */
+
+  /* Colors — dark theme (default) */
+  color-scheme: dark;
+  --color-bg: #080b10;
+  --color-bg-soft: #0d1118;
+  --color-surface: #10151d;
+  --color-surface-raised: #0d131c;
+  --color-text: #f3f6fa;
+  --color-text-muted: #9aa6b5;
+  --color-text-subtle: #7a8593; /* ≥ 4.5:1 on every surface (was #687484) */
+  --color-accent: #6ea8ff;
+  --color-success: #69d391;
+  --color-line: rgba(255, 255, 255, 0.09);
+  --color-line-strong: rgba(255, 255, 255, 0.15);
+  --color-line-hover: rgba(255, 255, 255, 0.28);
+  --color-header-bg: rgba(8, 11, 16, 0.76);
+  --gradient-brand-mark: linear-gradient(145deg, #172334, #0c121a);
+  --color-success-glow: rgba(105, 211, 145, 0.6);
+
+  /* Accent glow: rgb(var(--glow-rgb) / alpha); glow elements fade by --glow-opacity */
+  --glow-rgb: 63 140 255;
+  --glow-slate-rgb: 70 100 145;
+  --glow-opacity: 1;
+  --color-grid-line: rgba(255, 255, 255, 0.025);
+
+  /* Code card — stays dark in both themes */
+  --color-code-bg: rgba(12, 17, 24, 0.91);
+  --color-code-border: rgba(255, 255, 255, 0.15);
+  --color-code-line: rgba(255, 255, 255, 0.09);
+  --color-code-dot: #303945;
+  --color-code-text: #9aa6b5;
+  --color-code-key: #858f9d;
+  --color-code-value: #e8edf4;
+  --color-code-accent: #78aeff;
+  --color-code-punct: #868f9b;
+  --color-code-meta: #858f9c;
+
+  /* Project mockups — fixed palettes of the real sites, same in both themes */
+  --mock-dot: #566170;
+  --mock-accent: #4b94ff;
+  --mock-chart: linear-gradient(to top, #2e6fd0, #6ea8ff);
+  --mock-dark-bg: #0b1017;
+  --mock-dark-text: #f3f6fa;
+  --mock-dark-border: rgba(255, 255, 255, 0.12);
+  --mock-dark-divider: rgba(255, 255, 255, 0.08);
+  --mock-dark-block: rgba(255, 255, 255, 0.07);
+  --mock-dark-badge-bg: rgba(0, 0, 0, 0.35);
+  --mock-dark-badge-border: rgba(255, 255, 255, 0.16);
+  --mock-light-border: rgba(0, 0, 0, 0.1);
+  --mock-light-divider: rgba(0, 0, 0, 0.08);
+  --mock-light-badge-bg: rgba(255, 255, 255, 0.75);
+  --mock-light-badge-text: #182333;
+  --mock-laro-media: linear-gradient(145deg, #101722, #080c12);
+  --mock-finbox-media: linear-gradient(145deg, #111a25, #091016);
+  --mock-rentkit-media: linear-gradient(145deg, #edf4ff, #d7e7ff);
+  --mock-rentkit-bg: #f9fbff;
+  --mock-rentkit-text: #17202c;
+  --mock-rentkit-block: #e2ebf8;
+  --mock-foodly-media: linear-gradient(145deg, #f7f2e9, #e7eee4);
+  --mock-foodly-bg: #fffdf8;
+  --mock-foodly-text: #24241f;
+  --mock-foodly-block: #e6ece2;
+
+  /* Effects */
+  --blur-glass: 18px;
+
+  /* Spacing, 4px step */
+  --space-3xs: 0.25rem; /* 4 */
+  --space-2xs: 0.5rem;  /* 8 */
+  --space-xs: 0.75rem;  /* 12 */
+  --space-s: 1rem;      /* 16 */
+  --space-m: 1.5rem;    /* 24 */
+  --space-l: 2rem;      /* 32 */
+  --space-xl: 3rem;     /* 48 */
+  --space-2xl: 4rem;    /* 64 */
+  --space-3xl: 6rem;    /* 96 */
+  --space-section: clamp(3.125rem, 1.667rem + 7.292vw, 7.5rem); /* 50 → 120 */
+
+  /* Radii */
+  --radius-xs: 4px;
+  --radius-s: 8px;
+  --radius-m: 12px;
+  --radius-l: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-full: 50%;
+
+  /* Borders */
+  --border-width: 1px;
+
+  /* Shadows */
+  --shadow-m: 0 25px 55px rgba(0, 0, 0, 0.3);
+  --shadow-l: 0 35px 90px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 60px rgba(63, 140, 255, 0.08);
+
+  /* Motion */
+  --duration-fast: 0.2s;
+  --duration-base: 0.35s;
+  --ease-standard: ease;
+
+  /* Layout */
+  --container-max: 1280px;
+  --container-gutter: clamp(1rem, 0.825rem + 0.875vw, 1.875rem);
+  --header-height: 4.5rem; /* 72 — sticky header */
+}
+
+/* Colors — light theme: follows the OS unless the visitor picked dark in the header toggle */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --color-bg: #f6f8fb;
+    --color-bg-soft: #eef2f7;
+    --color-surface: #ffffff;
+    --color-surface-raised: #eaf0f8;
+    --color-text: #0b1220;
+    --color-text-muted: #465263;
+    --color-text-subtle: #5b6778;
+    --color-accent: #1f5fc4;
+    --color-success: #1f8f4e;
+    --color-line: rgba(11, 18, 32, 0.1);
+    --color-line-strong: rgba(11, 18, 32, 0.16);
+    --color-line-hover: rgba(11, 18, 32, 0.28);
+    --color-header-bg: rgba(246, 248, 251, 0.8);
+    --gradient-brand-mark: linear-gradient(145deg, #ffffff, #e9eef6);
+    --color-success-glow: rgba(31, 143, 78, 0.35);
+    --glow-opacity: 0.5;
+    --color-grid-line: rgba(11, 18, 32, 0.06);
+  }
+}
+
+/* Colors — light theme picked manually in the header toggle */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-bg: #f6f8fb;
+  --color-bg-soft: #eef2f7;
+  --color-surface: #ffffff;
+  --color-surface-raised: #eaf0f8;
+  --color-text: #0b1220;
+  --color-text-muted: #465263;
+  --color-text-subtle: #5b6778;
+  --color-accent: #1f5fc4;
+  --color-success: #1f8f4e;
+  --color-line: rgba(11, 18, 32, 0.1);
+  --color-line-strong: rgba(11, 18, 32, 0.16);
+  --color-line-hover: rgba(11, 18, 32, 0.28);
+  --color-header-bg: rgba(246, 248, 251, 0.8);
+  --gradient-brand-mark: linear-gradient(145deg, #ffffff, #e9eef6);
+  --color-success-glow: rgba(31, 143, 78, 0.35);
+  --glow-opacity: 0.5;
+  --color-grid-line: rgba(11, 18, 32, 0.06);
+}

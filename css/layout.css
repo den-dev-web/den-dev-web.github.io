@@ -1,0 +1,70 @@
+/* Anchor targets land below the sticky header */
+html {
+  scroll-padding-top: var(--header-height);
+}
+
+/* Page background: accent glows scroll with the page, the grid stays fixed and fades out downwards */
+body {
+  position: relative;
+  isolation: isolate;
+}
+
+body::before,
+body::after {
+  content: "";
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--color-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-grid-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  opacity: 0.25;
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 80%);
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
+}
+
+body::after {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 75% 4%, rgb(var(--glow-rgb) / 0.09), transparent 28rem),
+    radial-gradient(circle at 10% 34%, rgb(var(--glow-slate-rgb) / 0.06), transparent 25rem);
+  opacity: var(--glow-opacity);
+}
+
+.container {
+  width: min(100% - var(--container-gutter) * 2, var(--container-max));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--space-section);
+}
+
+.section--bordered {
+  border-top: var(--border-width) solid var(--color-line);
+}
+
+/* Hidden above the viewport until it receives keyboard focus */
+.skip-link {
+  position: absolute;
+  top: var(--space-2xs);
+  left: var(--space-2xs);
+  z-index: 100;
+  padding: var(--space-xs) var(--space-s);
+  border-radius: var(--radius-s);
+  background: var(--color-text);
+  color: var(--color-bg);
+  font-size: var(--text-s);
+  font-weight: var(--font-weight-bold);
+  transform: translateY(calc(-100% - var(--space-2xs) * 2));
+}
+
+.skip-link:focus {
+  transform: none;
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://den-dev-web.github.io/sitemap.xml

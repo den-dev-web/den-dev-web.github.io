@@ -1,0 +1,249 @@
+/* Wrapper of the project cards */
+.project-grid {
+  display: grid;
+  gap: var(--space-s);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: var(--border-width) solid var(--color-line);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+}
+
+/* Each project keeps the palette of its real site in both themes */
+.project-card--laro,
+.project-card--finbox {
+  --screen-bg: var(--mock-dark-bg);
+  --screen-text: var(--mock-dark-text);
+  --screen-border: var(--mock-dark-border);
+  --screen-divider: var(--mock-dark-divider);
+  --screen-block: var(--mock-dark-block);
+  --badge-bg: var(--mock-dark-badge-bg);
+  --badge-border: var(--mock-dark-badge-border);
+  --badge-text: var(--mock-dark-text);
+}
+
+.project-card--rentkit,
+.project-card--foodly {
+  --screen-border: var(--mock-light-border);
+  --screen-divider: var(--mock-light-divider);
+  --badge-bg: var(--mock-light-badge-bg);
+  --badge-border: var(--mock-light-border);
+  --badge-text: var(--mock-light-badge-text);
+}
+
+.project-card--laro {
+  --media-bg: var(--mock-laro-media);
+}
+
+.project-card--finbox {
+  --media-bg: var(--mock-finbox-media);
+}
+
+.project-card--rentkit {
+  --media-bg: var(--mock-rentkit-media);
+  --screen-bg: var(--mock-rentkit-bg);
+  --screen-text: var(--mock-rentkit-text);
+  --screen-block: var(--mock-rentkit-block);
+}
+
+.project-card--foodly {
+  --media-bg: var(--mock-foodly-media);
+  --screen-bg: var(--mock-foodly-bg);
+  --screen-text: var(--mock-foodly-text);
+  --screen-block: var(--mock-foodly-block);
+}
+
+.project-card__media {
+  --inset-top: var(--space-m);
+  --inset-x: var(--space-m);
+  position: relative;
+  display: block;
+  min-height: clamp(18.75rem, 17.8125rem + 4.6875vw, 21.5625rem); /* 300 → 345 */
+  overflow: hidden;
+  background: var(--media-bg);
+}
+
+/* Mockup of the site — an illustration, aria-hidden in markup */
+.project-card__screen {
+  position: absolute;
+  inset: var(--inset-top) var(--inset-x) var(--space-m);
+  overflow: hidden;
+  border: var(--border-width) solid var(--screen-border);
+  border-radius: var(--radius-m);
+  background: var(--screen-bg);
+  color: var(--screen-text);
+  box-shadow: var(--shadow-m);
+}
+
+.project-card__screen-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  height: 2rem;
+  padding-inline: var(--space-xs);
+  border-bottom: var(--border-width) solid var(--screen-divider);
+}
+
+.project-card__screen-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: var(--radius-full);
+  background: var(--mock-dot);
+}
+
+/* Miniature text: scaled-down copy of the real site, below the 12px minimum on purpose */
+.project-card__screen-title {
+  margin-left: var(--space-2xs); /* next to the dots like a tab title — the badge takes the right side */
+  font-size: 7px;
+  opacity: 0.55;
+}
+
+.project-card__screen-body {
+  padding: var(--space-l) var(--space-m);
+}
+
+.project-card__kicker {
+  display: block;
+  margin-bottom: var(--space-2xs);
+  font-size: 7px;
+  letter-spacing: 0.17em;
+  opacity: 0.5;
+}
+
+.project-card__headline {
+  display: block;
+  font-size: var(--text-2xl);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.project-card__accent-line {
+  width: 80px;
+  height: 2px;
+  margin-top: var(--space-m);
+  background: var(--mock-accent);
+}
+
+.project-card__blocks {
+  display: flex;
+  gap: var(--space-2xs);
+  margin-top: var(--space-xl);
+}
+
+.project-card__block {
+  flex: 1;
+  height: 80px;
+  border-radius: var(--radius-s);
+  background: var(--screen-block);
+}
+
+.project-card__blocks--round .project-card__block {
+  height: 55px;
+  border-radius: var(--radius-full);
+}
+
+.project-card__chart {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-2xs);
+  height: 100px;
+  margin-top: var(--space-l);
+}
+
+/* Bar heights are data — set inline in markup */
+.project-card__bar {
+  flex: 1;
+  border-radius: var(--radius-xs) var(--radius-xs) 0 0;
+  background: var(--mock-chart);
+}
+
+.project-card__badge {
+  position: absolute;
+  top: calc(var(--inset-top) + 3px);
+  right: calc(var(--inset-x) + var(--space-2xs));
+  padding: 1px var(--space-2xs);
+  border: var(--border-width) solid var(--badge-border);
+  border-radius: var(--radius-s);
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  font-size: var(--text-xs);
+}
+
+/* Fills the card so tags line up across a row whatever the text length */
+.project-card__info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--space-m);
+}
+
+.project-card__type {
+  margin-bottom: var(--space-2xs);
+  color: var(--color-accent);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-card__title {
+  margin-bottom: var(--space-2xs);
+  font-size: var(--text-xl);
+  letter-spacing: -0.035em;
+}
+
+.project-card__text {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  margin-top: auto;
+  padding-top: var(--space-m);
+}
+
+.project-card__tag {
+  padding: var(--space-3xs) var(--space-2xs);
+  border: var(--border-width) solid var(--color-line);
+  border-radius: var(--radius-s);
+  color: var(--color-text-subtle);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+@media (min-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-card__media {
+    --inset-x: var(--space-l);
+  }
+
+  .project-card__screen-body {
+    padding-inline: var(--space-l);
+  }
+}
+
+@media (hover: hover) {
+  .project-card:hover {
+    border-color: var(--color-line-strong);
+  }
+
+  .project-card__media:hover .project-card__screen {
+    transform: translateY(-6px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .project-card__screen {
+    transition: transform var(--duration-base) var(--ease-standard);
+  }
+}

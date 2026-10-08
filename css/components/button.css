@@ -1,0 +1,39 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-s);
+  min-height: 3rem; /* 48 */
+  padding-inline: var(--space-m);
+  border: var(--border-width) solid transparent;
+  border-radius: var(--radius-m);
+  font-size: var(--text-s);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Inverted colors: light button in the dark theme, dark button in the light theme */
+.button--primary {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.button--secondary {
+  border-color: var(--color-line-strong);
+  background: var(--color-surface);
+}
+
+@media (hover: hover) {
+  .button:hover {
+    transform: translateY(-2px);
+  }
+
+  .button--secondary:hover {
+    border-color: var(--color-line-hover);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .button {
+    transition: transform var(--duration-fast) var(--ease-standard);
+  }
+}

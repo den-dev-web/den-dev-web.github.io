@@ -5,166 +5,227 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Denis Ivanchenko — Frontend Developer for digital agencies. Frontend, WordPress and web implementation support.">
   <title>Denis Ivanchenko — Frontend Developer for Digital Agencies</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://den-dev-web.github.io/">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://den-dev-web.github.io/">
+  <meta property="og:title" content="Denis Ivanchenko — Frontend Developer for Digital Agencies">
+  <meta property="og:description" content="Denis Ivanchenko — Frontend Developer for digital agencies. Frontend, WordPress and web implementation support.">
+  <meta property="og:site_name" content="Denis Ivanchenko">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://den-dev-web.github.io/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Denis Ivanchenko — Frontend development for digital agencies, with previews of the LARO and Finbox projects">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Denis Ivanchenko",
+      "url": "https://den-dev-web.github.io/",
+      "jobTitle": "Frontend Developer",
+      "sameAs": ["https://github.com/den-dev-web"]
+    }
+  </script>
+  <script>
+    // Apply the saved theme before first paint to avoid a flash of the wrong theme
+    try {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light" || savedTheme === "dark") document.documentElement.dataset.theme = savedTheme;
+    } catch {}
+  </script>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components/header.css">
+  <link rel="stylesheet" href="css/components/button.css">
+  <link rel="stylesheet" href="css/components/eyebrow.css">
+  <link rel="stylesheet" href="css/components/section-heading.css">
+  <link rel="stylesheet" href="css/components/service-card.css">
+  <link rel="stylesheet" href="css/components/project-card.css">
+  <link rel="stylesheet" href="css/components/process.css">
+  <link rel="stylesheet" href="css/components/collab.css">
+  <link rel="stylesheet" href="css/components/stack.css">
+  <link rel="stylesheet" href="css/components/contact.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/utils.css">
+  <script type="module" src="js/main.js"></script>
+  <script defer data-domain="den-dev-web.github.io" src="https://plausible.io/js/script.outbound-links.js"></script>
 </head>
 <body>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="#top" aria-label="Denis Ivanchenko home">
-      <span class="brand-mark">DI</span><span>Denis Ivanchenko</span>
+<a class="skip-link" href="#top">Skip to content</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__brand" href="#top">
+      <span class="header__brand-mark" aria-hidden="true">DI</span><span>Denis Ivanchenko</span>
     </a>
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="#work">Work</a><a href="#services">Services</a><a href="#process">Process</a>
-      <a href="#contact">Contact</a>
-      <a class="nav-github" href="https://github.com/den-dev-web" target="_blank" rel="noreferrer">GitHub ↗</a>
+    <button class="header__theme" type="button" aria-label="Switch theme" data-theme-toggle>
+      <svg class="header__theme-icon header__theme-icon--sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="header__theme-icon header__theme-icon--moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Menu" data-menu-button>
+      <span class="header__toggle-line"></span><span class="header__toggle-line"></span><span class="header__toggle-line"></span>
+    </button>
+    <nav class="header__nav" id="primary-menu" aria-label="Primary navigation" data-menu>
+      <ul class="header__menu">
+        <li class="header__item"><a class="header__link" href="#services">Services</a></li>
+        <li class="header__item"><a class="header__link" href="#work">Work</a></li>
+        <li class="header__item"><a class="header__link" href="#process">Process</a></li>
+        <li class="header__item"><a class="header__link" href="#contact">Contact</a></li>
+        <li class="header__item"><a class="header__link header__link--github" href="https://github.com/den-dev-web" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a></li>
+      </ul>
     </nav>
   </div>
 </header>
 
 <main id="top">
 <section class="hero section">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow"><span class="status-dot"></span> Available for agency collaboration</p>
-      <h1>Frontend development<br><span>for digital agencies.</span></h1>
-      <p class="hero-text">I help agencies turn designs and ideas into clean, responsive, production-ready websites — as an external frontend or WordPress developer.</p>
-      <div class="hero-actions">
-        <a class="button button-primary" href="#work">View selected work <span>↓</span></a>
-        <a class="button button-secondary" href="#contact">Start a conversation <span>↗</span></a>
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow"><span class="hero__status-dot"></span> Available for agency collaboration</p>
+      <h1 class="hero__title">Frontend development<br><span class="hero__title-accent">for digital agencies.</span></h1>
+      <p class="hero__text">I help agencies turn designs and ideas into clean, responsive, production-ready websites — as an external frontend or WordPress developer.</p>
+      <div class="hero__actions">
+        <a class="button button--primary" href="#work">View selected work <span aria-hidden="true">↓</span></a>
+        <a class="button button--secondary" href="#contact">Start a conversation <span aria-hidden="true">↗</span></a>
       </div>
-      <div class="tech-line"><span>HTML</span><i>·</i><span>CSS</span><i>·</i><span>JavaScript</span><i>·</i><span>Tailwind</span><i>·</i><span>WordPress</span></div>
+      <div class="hero__tech"><span>HTML</span><span class="hero__tech-separator" aria-hidden="true">·</span><span>CSS</span><span class="hero__tech-separator" aria-hidden="true">·</span><span>JavaScript</span><span class="hero__tech-separator" aria-hidden="true">·</span><span>Tailwind</span><span class="hero__tech-separator" aria-hidden="true">·</span><span>WordPress</span></div>
     </div>
 
-    <div class="hero-visual" aria-hidden="true">
-      <div class="orb orb-one"></div><div class="orb orb-two"></div><div class="visual-grid"></div>
-      <div class="code-card">
-        <div class="window-bar"><span></span><span></span><span></span></div>
-        <div class="code-lines">
-          <b class="c-blue">.agency-project</b> <em>{</em>
-          <p><span class="c-muted">display</span>: <span class="c-white">grid</span>;</p>
-          <p><span class="c-muted">responsive</span>: <span class="c-white">true</span>;</p>
-          <p><span class="c-muted">quality</span>: <span class="c-white">high</span>;</p>
-          <p><span class="c-muted">workflow</span>: <span class="c-blue">"yours"</span>;</p>
-          <em>}</em>
+    <div class="hero__visual" aria-hidden="true">
+      <div class="hero__orb hero__orb--large"></div><div class="hero__orb hero__orb--small"></div><div class="hero__grid-lines"></div>
+      <div class="hero__code">
+        <div class="hero__code-bar"><span class="hero__code-dot"></span><span class="hero__code-dot"></span><span class="hero__code-dot"></span></div>
+        <div class="hero__code-body">
+          <span class="hero__code-selector">.agency-project</span> <span class="hero__code-punct">{</span>
+          <p class="hero__code-line"><span class="hero__code-token hero__code-token--key">display</span>: <span class="hero__code-token hero__code-token--value">grid</span>;</p>
+          <p class="hero__code-line"><span class="hero__code-token hero__code-token--key">responsive</span>: <span class="hero__code-token hero__code-token--value">true</span>;</p>
+          <p class="hero__code-line"><span class="hero__code-token hero__code-token--key">quality</span>: <span class="hero__code-token hero__code-token--value">high</span>;</p>
+          <p class="hero__code-line"><span class="hero__code-token hero__code-token--key">workflow</span>: <span class="hero__code-token hero__code-token--accent">"yours"</span>;</p>
+          <span class="hero__code-punct">}</span>
         </div>
-        <div class="code-footer"><span>frontend / wordpress</span><span>ready</span></div>
+        <div class="hero__code-footer"><span>frontend / wordpress</span><span>ready</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="services" class="section section-border">
+<section id="services" class="section section--bordered">
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">Development support</p>
-      <h2>Extra capacity when your team needs it.</h2>
-      <p>I can plug into an existing agency workflow and take ownership of implementation work.</p>
+      <h2 class="section-heading__title">Extra capacity when your team needs it.</h2>
+      <p class="section-heading__text">I can plug into an existing agency workflow and take ownership of implementation work.</p>
     </div>
     <div class="service-grid">
-      <article class="service-card"><span class="service-number">01</span><h3>Frontend Development</h3><p>Responsive interfaces built from Figma, design systems or existing websites.</p><ul><li>HTML / CSS / JavaScript</li><li>Responsive & mobile-first</li><li>Interactions & UI states</li><li>Accessibility & performance</li></ul></article>
-      <article class="service-card"><span class="service-number">02</span><h3>WordPress Development</h3><p>Clean frontend implementation for business websites, CMS projects and e-commerce.</p><ul><li>Figma → WordPress</li><li>Custom templates & themes</li><li>WooCommerce frontend</li><li>Maintenance & improvements</li></ul></article>
-      <article class="service-card"><span class="service-number">03</span><h3>API & Integrations</h3><p>Practical integrations that connect interfaces with services and existing systems.</p><ul><li>REST APIs</li><li>JavaScript integrations</li><li>Forms & dynamic UI</li><li>Basic Python / FastAPI</li></ul></article>
+      <article class="service-card"><span class="service-card__number">01</span><h3 class="service-card__title">Frontend Development</h3><p class="service-card__text">Responsive interfaces built from Figma, design systems or existing websites.</p><ul class="service-card__list"><li class="service-card__item">HTML / CSS / JavaScript</li><li class="service-card__item">Responsive & mobile-first</li><li class="service-card__item">Interactions & UI states</li><li class="service-card__item">Accessibility & performance</li></ul></article>
+      <article class="service-card"><span class="service-card__number">02</span><h3 class="service-card__title">WordPress Development</h3><p class="service-card__text">Clean frontend implementation for business websites, CMS projects and e-commerce.</p><ul class="service-card__list"><li class="service-card__item">Figma → WordPress</li><li class="service-card__item">Custom templates & themes</li><li class="service-card__item">WooCommerce frontend</li><li class="service-card__item">Maintenance & improvements</li></ul></article>
+      <article class="service-card"><span class="service-card__number">03</span><h3 class="service-card__title">API & Integrations</h3><p class="service-card__text">Practical integrations that connect interfaces with services and existing systems.</p><ul class="service-card__list"><li class="service-card__item">REST APIs</li><li class="service-card__item">JavaScript integrations</li><li class="service-card__item">Forms & dynamic UI</li><li class="service-card__item">Basic Python / FastAPI</li></ul></article>
     </div>
   </div>
 </section>
 
 <section id="work" class="section">
   <div class="container">
-    <div class="section-heading work-heading">
-      <div><p class="eyebrow">Selected work</p><h2>Built to show how I work.</h2></div>
-      <a class="text-link" href="https://github.com/den-dev-web" target="_blank" rel="noreferrer">View GitHub ↗</a>
+    <div class="section-heading section-heading--split">
+      <div><p class="eyebrow">Selected work</p><h2 class="section-heading__title">Built to show how I work.</h2></div>
+      <a class="section-heading__link" href="https://github.com/den-dev-web" target="_blank" rel="noreferrer">View GitHub <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a>
     </div>
 
     <div class="project-grid">
-      <article class="project-card project-laro">
-        <a class="project-media" href="https://den-dev-web.github.io/laro/" target="_blank" rel="noreferrer" aria-label="Open LARO live demo">
-          <div class="mock-browser"><div class="mock-top"><span></span><span></span><span></span><small>LARO</small></div><div class="mock-content"><span class="mock-kicker">FAST. CERTAIN. EVERYWHERE.</span><strong>LARO</strong><div class="mock-line"></div><div class="mock-blocks"><i></i><i></i><i></i></div></div></div>
-          <span class="project-open">Live demo ↗</span>
+      <article class="project-card project-card--laro">
+        <a class="project-card__media" href="https://den-dev-web.github.io/laro/" target="_blank" rel="noreferrer" aria-label="Live demo: LARO (opens in a new tab)">
+          <div class="project-card__screen" aria-hidden="true"><div class="project-card__screen-bar"><span class="project-card__screen-dot"></span><span class="project-card__screen-dot"></span><span class="project-card__screen-dot"></span><small class="project-card__screen-title">LARO</small></div><div class="project-card__screen-body"><span class="project-card__kicker">FAST. CERTAIN. EVERYWHERE.</span><strong class="project-card__headline">LARO</strong><div class="project-card__accent-line"></div><div class="project-card__blocks"><span class="project-card__block"></span><span class="project-card__block"></span><span class="project-card__block"></span></div></div></div>
+          <span class="project-card__badge">Live demo <span aria-hidden="true">↗</span></span>
         </a>
-        <div class="project-info"><p class="project-type">Corporate website</p><h3>LARO</h3><p>Dark, modern corporate website concept with strong visual hierarchy and responsive layouts.</p><div class="project-meta"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+        <div class="project-card__info"><p class="project-card__type">Corporate website</p><h3 class="project-card__title">LARO</h3><p class="project-card__text">Dark, modern corporate website concept with strong visual hierarchy and responsive layouts.</p><div class="project-card__tags"><span class="project-card__tag">HTML</span><span class="project-card__tag">CSS</span><span class="project-card__tag">JavaScript</span></div></div>
       </article>
 
-      <article class="project-card project-rentkit">
-        <a class="project-media" href="https://den-dev-web.github.io/rentkit/" target="_blank" rel="noreferrer" aria-label="Open RentKit live demo">
-          <div class="mock-browser"><div class="mock-top"><span></span><span></span><span></span><small>RentKit</small></div><div class="mock-content"><span class="mock-kicker">RENT WITH CONFIDENCE</span><strong>Find your<br>next place.</strong><div class="property-row"><i></i><i></i><i></i></div></div></div>
-          <span class="project-open">Live demo ↗</span>
+      <article class="project-card project-card--rentkit">
+        <a class="project-card__media" href="https://den-dev-web.github.io/rentkit/" target="_blank" rel="noreferrer" aria-label="Live demo: RentKit (opens in a new tab)">
+          <div class="project-card__screen" aria-hidden="true"><div class="project-card__screen-bar"><span class="project-card__screen-dot"></span><span class="project-card__screen-dot"></span><span class="project-card__screen-dot"></span><small class="project-card__screen-title">RentKit</small></div><div class="project-card__screen-body"><span class="project-card__kicker">RENT WITH CONFIDENCE</span><strong class="project-card__headline">Find your<br>next place.</strong><div class="project-card__blocks"><span class="project-card__block"></span><span class="project-card__block"></span><span class="project-card__block"></span></div></div></div>
+          <span class="project-card__badge">Live demo <span aria-hidden="true">↗</span></span>
         </a>
-        <div class="project-info"><p class="project-type">Rental / SaaS interface</p><h3>RentKit</h3><p>Product-oriented rental interface with responsive layouts and clear user flows.</p><div class="project-meta"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+        <div class="project-card__info"><p class="project-card__type">Rental / SaaS interface</p><h3 class="project-card__title">RentKit</h3><p class="project-card__text">Product-oriented rental interface with responsive layouts and clear user flows.</p><div class="project-card__tags"><span class="project-card__tag">HTML</span><span class="project-card__tag">CSS</span><span class="project-card__tag">JavaScript</span></div></div>
       </article>
 
-      <article class="project-card project-foodly">
-        <a class="project-media" href="https://den-dev-web.github.io/foodly/" target="_blank" rel="noreferrer" aria-label="Open Foodly live demo">
-          <div class="mock-browser"><div class="mock-top"><span></span><span></span><span></span><small>Foodly</small></div><div class="mock-content"><span class="mock-kicker">GOOD FOOD. SIMPLE ORDER.</span><strong>Foodly</strong><div class="food-row"><i></i><i></i><i></i><i></i></div></div></div>
-          <span class="project-open">Live demo ↗</span>
+      <article class="project-card project-card--foodly">
+        <a class="project-card__media" href="https://den-dev-web.github.io/foodly/" target="_blank" rel="noreferrer" aria-label="Live demo: Foodly (opens in a new tab)">
+          <div class="project-card__screen" aria-hidden="true"><div class="project-card__screen-bar"><span class="project-card__screen-dot"></span><span class="project-card__screen-dot"></span><span class="project-card__screen-dot"></span><small class="project-card__screen-title">Foodly</small></div><div class="project-card__screen-body"><span class="project-card__kicker">GOOD FOOD. SIMPLE ORDER.</span><strong class="project-card__headline">Foodly</strong><div class="project-card__blocks project-card__blocks--round"><span class="project-card__block"></span><span class="project-card__block"></span><span class="project-card__block"></span><span class="project-card__block"></span></div></div></div>
+          <span class="project-card__badge">Live demo <span aria-hidden="true">↗</span></span>
         </a>
-        <div class="project-info"><p class="project-type">Food delivery UI</p><h3>Foodly</h3><p>Responsive product interface designed around discovery, product presentation and mobile usability.</p><div class="project-meta"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+        <div class="project-card__info"><p class="project-card__type">Food delivery UI</p><h3 class="project-card__title">Foodly</h3><p class="project-card__text">Responsive product interface designed around discovery, product presentation and mobile usability.</p><div class="project-card__tags"><span class="project-card__tag">HTML</span><span class="project-card__tag">CSS</span><span class="project-card__tag">JavaScript</span></div></div>
       </article>
 
-      <article class="project-card project-finbox">
-        <a class="project-media" href="https://den-dev-web.github.io/finbox/" target="_blank" rel="noreferrer" aria-label="Open Finbox live demo">
-          <div class="mock-browser"><div class="mock-top"><span></span><span></span><span></span><small>Finbox</small></div><div class="mock-content"><span class="mock-kicker">FINANCIAL OVERVIEW</span><strong>$84,240</strong><div class="chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
-          <span class="project-open">Live demo ↗</span>
+      <article class="project-card project-card--finbox">
+        <a class="project-card__media" href="https://den-dev-web.github.io/finbox/" target="_blank" rel="noreferrer" aria-label="Live demo: Finbox (opens in a new tab)">
+          <div class="project-card__screen" aria-hidden="true"><div class="project-card__screen-bar"><span class="project-card__screen-dot"></span><span class="project-card__screen-dot"></span><span class="project-card__screen-dot"></span><small class="project-card__screen-title">Finbox</small></div><div class="project-card__screen-body"><span class="project-card__kicker">FINANCIAL OVERVIEW</span><strong class="project-card__headline">$84,240</strong><div class="project-card__chart"><span class="project-card__bar" style="height: 35%"></span><span class="project-card__bar" style="height: 48%"></span><span class="project-card__bar" style="height: 40%"></span><span class="project-card__bar" style="height: 70%"></span><span class="project-card__bar" style="height: 58%"></span><span class="project-card__bar" style="height: 82%"></span><span class="project-card__bar" style="height: 95%"></span></div></div></div>
+          <span class="project-card__badge">Live demo <span aria-hidden="true">↗</span></span>
         </a>
-        <div class="project-info"><p class="project-type">Dashboard interface</p><h3>Finbox</h3><p>Structured dashboard concept focused on data presentation, reusable UI and responsive components.</p><div class="project-meta"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+        <div class="project-card__info"><p class="project-card__type">Dashboard interface</p><h3 class="project-card__title">Finbox</h3><p class="project-card__text">Structured dashboard concept focused on data presentation, reusable UI and responsive components.</p><div class="project-card__tags"><span class="project-card__tag">HTML</span><span class="project-card__tag">CSS</span><span class="project-card__tag">JavaScript</span></div></div>
       </article>
     </div>
   </div>
 </section>
 
-<section id="process" class="section section-border">
-  <div class="container process-grid">
-    <div class="section-heading"><p class="eyebrow">Agency workflow</p><h2>Your client.<br>Your workflow.</h2><p>I work as an extension of your team, not as another layer between you and the client.</p></div>
-    <div class="process-list">
-      <div class="process-item"><span>01</span><div><h3>You provide the design</h3><p>Figma, design system, existing website or project requirements.</p></div></div>
-      <div class="process-item"><span>02</span><div><h3>I handle implementation</h3><p>Frontend, WordPress, responsive behaviour and required interactions.</p></div></div>
-      <div class="process-item"><span>03</span><div><h3>Your team reviews</h3><p>I work within your existing tools and iterate from your feedback.</p></div></div>
-      <div class="process-item"><span>04</span><div><h3>You deliver the project</h3><p>Your agency keeps the client relationship and project ownership.</p></div></div>
-    </div>
+<section id="process" class="section section--bordered">
+  <div class="container process">
+    <div class="section-heading"><p class="eyebrow">Agency workflow</p><h2 class="section-heading__title">Your client.<br>Your workflow.</h2><p class="section-heading__text">I work as an extension of your team, not as another layer between you and the client.</p></div>
+    <ol class="process__list">
+      <li class="process__item"><span class="process__number" aria-hidden="true">01</span><div><h3 class="process__title">You provide the design</h3><p class="process__text">Figma, design system, existing website or project requirements.</p></div></li>
+      <li class="process__item"><span class="process__number" aria-hidden="true">02</span><div><h3 class="process__title">I handle implementation</h3><p class="process__text">Frontend, WordPress, responsive behaviour and required interactions.</p></div></li>
+      <li class="process__item"><span class="process__number" aria-hidden="true">03</span><div><h3 class="process__title">Your team reviews</h3><p class="process__text">I work within your existing tools and iterate from your feedback.</p></div></li>
+      <li class="process__item"><span class="process__number" aria-hidden="true">04</span><div><h3 class="process__title">You deliver the project</h3><p class="process__text">Your agency keeps the client relationship and project ownership.</p></div></li>
+    </ol>
   </div>
 </section>
 
 <section class="section collaboration">
   <div class="container">
-    <div class="collab-box">
-      <div><p class="eyebrow">Flexible collaboration</p><h2>One developer.<br>Different ways to work together.</h2></div>
-      <div class="collab-list">
-        <div><b>Project-based</b><span>Own a specific website or development task.</span></div>
-        <div><b>Agency overflow</b><span>Add capacity when your internal team is busy.</span></div>
-        <div><b>Ongoing support</b><span>Handle regular frontend and WordPress work.</span></div>
-        <div><b>White-label</b><span>Work behind the scenes inside your workflow.</span></div>
-      </div>
+    <div class="collab">
+      <div><p class="eyebrow">Flexible collaboration</p><h2 class="collab__title">One developer.<br>Different ways to work together.</h2></div>
+      <dl class="collab__list">
+        <div class="collab__row"><dt class="collab__term">Project-based</dt><dd class="collab__desc">Own a specific website or development task.</dd></div>
+        <div class="collab__row"><dt class="collab__term">Agency overflow</dt><dd class="collab__desc">Add capacity when your internal team is busy.</dd></div>
+        <div class="collab__row"><dt class="collab__term">Ongoing support</dt><dd class="collab__desc">Handle regular frontend and WordPress work.</dd></div>
+        <div class="collab__row"><dt class="collab__term">White-label</dt><dd class="collab__desc">Work behind the scenes inside your workflow.</dd></div>
+      </dl>
     </div>
   </div>
 </section>
 
 <section class="section stack">
   <div class="container">
-    <div class="section-heading"><p class="eyebrow">Tools I work with</p><h2>A practical, frontend-first stack.</h2></div>
-    <div class="stack-grid">
-      <div><strong>Frontend</strong><span>HTML5 · CSS3 · JavaScript · TypeScript · Tailwind CSS · Bootstrap · Vue</span></div>
-      <div><strong>CMS & Commerce</strong><span>WordPress · WooCommerce · OpenCart</span></div>
-      <div><strong>Backend & APIs</strong><span>Python · FastAPI · REST APIs · Jinja2 · PostgreSQL</span></div>
-      <div><strong>Design & Workflow</strong><span>Figma · Adobe XD · Photoshop · Git</span></div>
-    </div>
+    <div class="section-heading"><p class="eyebrow">Tools I work with</p><h2 class="section-heading__title">A practical, frontend-first stack.</h2></div>
+    <ul class="stack__grid">
+      <li class="stack__cell"><strong class="stack__title">Frontend</strong><span class="stack__items">HTML5 · CSS3 · JavaScript · TypeScript · Tailwind CSS · Bootstrap · Vue</span></li>
+      <li class="stack__cell"><strong class="stack__title">CMS & Commerce</strong><span class="stack__items">WordPress · WooCommerce · OpenCart</span></li>
+      <li class="stack__cell"><strong class="stack__title">Backend & APIs</strong><span class="stack__items">Python · FastAPI · REST APIs · Jinja2 · PostgreSQL</span></li>
+      <li class="stack__cell"><strong class="stack__title">Design & Workflow</strong><span class="stack__items">Figma · Adobe XD · Photoshop · Git</span></li>
+    </ul>
   </div>
 </section>
 
-<section id="contact" class="section contact-section">
+<section id="contact" class="section">
   <div class="container">
-    <div class="contact-box">
+    <div class="contact">
       <p class="eyebrow">Let's work together</p>
-      <h2>Need an extra developer<br><span>for your next project?</span></h2>
-      <p>If your agency occasionally has more frontend or WordPress work than your team can handle, let's talk.</p>
-      <div class="hero-actions">
-        <a class="button button-primary" href="mailto:YOUR_EMAIL@example.com">Start a conversation ↗</a>
-        <a class="button button-secondary" href="https://github.com/den-dev-web" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <h2 class="contact__title">Need an extra developer<br><span class="contact__title-accent">for your next project?</span></h2>
+      <p class="contact__text">If your agency occasionally has more frontend or WordPress work than your team can handle, let's talk.</p>
+      <div class="contact__actions">
+        <a class="button button--primary" href="mailto:YOUR_EMAIL@example.com">Start a conversation <span aria-hidden="true">↗</span></a>
+        <a class="button button--secondary" href="https://github.com/den-dev-web" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span><span class="visually-hidden">(opens in a new tab)</span></a>
       </div>
-      <p class="contact-note">Based in Ukraine · Available for remote project-based and ongoing collaboration.</p>
+      <p class="contact__note">Based in Ukraine · Available for remote project-based and ongoing collaboration.</p>
     </div>
   </div>
 </section>
 </main>
 
-<footer class="site-footer"><div class="container footer-inner"><span>© 2026 Denis Ivanchenko</span><span>Frontend Developer · WordPress · Web Implementation</span></div></footer>
+<footer class="footer"><div class="container footer__inner"><span>© <span data-current-year>2026</span> Denis Ivanchenko</span><span>Frontend Developer · WordPress · Web Implementation</span></div></footer>
 </body>
 </html>

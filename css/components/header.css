@@ -1,0 +1,188 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  min-height: var(--header-height);
+  border-bottom: var(--border-width) solid var(--color-line);
+  background: var(--color-header-bg);
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  backdrop-filter: blur(var(--blur-glass));
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.header__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--text-s);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+  margin-right: auto;
+}
+
+.header__brand-mark {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: var(--border-width) solid var(--color-line-strong);
+  border-radius: var(--radius-s);
+  background: var(--gradient-brand-mark);
+  color: var(--color-accent);
+  font-size: var(--text-xs);
+}
+
+/* Icon buttons: theme switch and mobile burger */
+.header__theme,
+.header__toggle {
+  display: inline-grid;
+  place-content: center;
+  gap: var(--space-3xs);
+  width: 2.75rem; /* 44 — primary mobile control */
+  height: 2.75rem;
+  border: var(--border-width) solid var(--color-line);
+  border-radius: var(--radius-s);
+  color: var(--color-text);
+}
+
+/* Icon shows the theme a click switches to: sun in dark, moon in light */
+.header__theme-icon--moon {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .header__theme-icon--sun {
+    display: none;
+  }
+
+  :root:not([data-theme="dark"]) .header__theme-icon--moon {
+    display: block;
+  }
+}
+
+:root[data-theme="light"] .header__theme-icon--sun {
+  display: none;
+}
+
+:root[data-theme="light"] .header__theme-icon--moon {
+  display: block;
+}
+
+.header__toggle-line {
+  display: block;
+  width: 1.125rem;
+  height: 2px;
+  border-radius: 1px;
+  background: currentColor;
+}
+
+/* Lines fold into a cross: offset = line height + gap */
+.header__toggle[aria-expanded="true"] .header__toggle-line:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.header__toggle[aria-expanded="true"] .header__toggle-line:nth-child(2) {
+  opacity: 0;
+}
+
+.header__toggle[aria-expanded="true"] .header__toggle-line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Mobile: dropdown panel under the header, opened by js/modules/menu.js */
+.header__nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: var(--space-2xs) var(--container-gutter) var(--space-m);
+  border-bottom: var(--border-width) solid var(--color-line);
+  background: var(--color-bg);
+}
+
+.header__nav.is-open {
+  display: block;
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+}
+
+.header__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  min-height: 2.75rem; /* 44 — mobile touch target */
+  color: var(--color-text-muted);
+  font-size: var(--text-s);
+}
+
+.header__link--github {
+  padding-inline: var(--space-xs);
+  border: var(--border-width) solid var(--color-line);
+  border-radius: var(--radius-s);
+  color: var(--color-text);
+}
+
+@media (min-width: 768px) {
+  .header__inner {
+    gap: var(--space-m);
+  }
+
+  .header__toggle {
+    display: none;
+  }
+
+  /* After the menu on desktop; before the burger in DOM so mobile focus order stays logical */
+  .header__theme {
+    order: 1;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .header__nav {
+    display: block;
+    position: static;
+    padding: 0;
+    border-bottom: none;
+    background: none;
+  }
+
+  .header__menu {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-m);
+  }
+
+  .header__link {
+    min-height: 2.25rem; /* 36 — touch target ≥ 24px */
+  }
+}
+
+@media (hover: hover) {
+  .header__link:hover {
+    color: var(--color-text);
+  }
+
+  .header__theme:hover,
+  .header__toggle:hover {
+    border-color: var(--color-line-hover);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .header__toggle-line {
+    transition: transform var(--duration-fast) var(--ease-standard), opacity var(--duration-fast) var(--ease-standard);
+  }
+}

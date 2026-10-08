@@ -1,0 +1,57 @@
+/* Wrapper of the service cards */
+.service-grid {
+  display: grid;
+  gap: var(--space-s);
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-l);
+  border: var(--border-width) solid var(--color-line);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(145deg, var(--color-surface), var(--color-bg-soft));
+}
+
+.service-card__number {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+.service-card__title {
+  margin-block: var(--space-xl) var(--space-2xs);
+  font-size: var(--text-l);
+  letter-spacing: -0.025em;
+}
+
+.service-card__text {
+  color: var(--color-text-muted);
+  font-size: var(--text-s);
+}
+
+/* Pushed to the bottom so lists line up across cards whatever the text length */
+.service-card__list {
+  margin-top: auto;
+  padding-top: var(--space-m);
+  list-style: none;
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+
+.service-card__item {
+  padding-block: var(--space-2xs);
+  border-top: var(--border-width) solid var(--color-line);
+}
+
+@media (min-width: 992px) {
+  .service-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (hover: hover) {
+  .service-card:hover {
+    border-color: var(--color-line-strong);
+  }
+}
