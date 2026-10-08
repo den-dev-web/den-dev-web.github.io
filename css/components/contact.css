@@ -1,0 +1,55 @@
+.contact {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: var(--space-xl) var(--space-m);
+  border: var(--border-width) solid var(--color-line-strong);
+  border-radius: var(--radius-2xl);
+  background: var(--color-surface-raised);
+}
+
+/* Accent glow on its own layer so the light theme can fade it via --glow-opacity */
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at 85% 40%, rgb(var(--glow-rgb) / 0.17), transparent 32%);
+  opacity: var(--glow-opacity);
+  pointer-events: none;
+}
+
+.contact__title {
+  max-width: 700px;
+  margin-bottom: var(--space-s);
+  font-size: var(--text-4xl);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.contact__title-accent {
+  color: var(--color-text-subtle);
+}
+
+.contact__text {
+  max-width: 37rem;
+  color: var(--color-text-muted);
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-block: var(--space-l);
+}
+
+.contact__note {
+  color: var(--color-text-subtle);
+  font-size: var(--text-xs);
+}
+
+@media (min-width: 768px) {
+  .contact {
+    padding: var(--space-3xl) var(--space-2xl);
+  }
+}
