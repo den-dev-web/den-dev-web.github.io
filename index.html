@@ -18,13 +18,16 @@
     <a class="header__brand" href="#top" aria-label="Denis Ivanchenko home">
       <span class="header__brand-mark" aria-hidden="true">DI</span><span>Denis Ivanchenko</span>
     </a>
-    <nav class="header__nav" aria-label="Primary navigation">
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Menu" data-menu-button>
+      <span class="header__toggle-line"></span><span class="header__toggle-line"></span><span class="header__toggle-line"></span>
+    </button>
+    <nav class="header__nav" id="primary-menu" aria-label="Primary navigation" data-menu>
       <ul class="header__menu">
         <li class="header__item"><a class="header__link" href="#services">Services</a></li>
         <li class="header__item"><a class="header__link" href="#work">Work</a></li>
         <li class="header__item"><a class="header__link" href="#process">Process</a></li>
         <li class="header__item"><a class="header__link" href="#contact">Contact</a></li>
-        <li class="header__item header__item--github"><a class="header__link header__link--github" href="https://github.com/den-dev-web" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
+        <li class="header__item"><a class="header__link header__link--github" href="https://github.com/den-dev-web" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
       </ul>
     </nav>
   </div>
