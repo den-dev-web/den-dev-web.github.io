@@ -218,6 +218,15 @@
   font-size: var(--text-xs);
 }
 
+.project-card__repo {
+  align-self: flex-start;
+  margin-top: var(--space-s);
+  padding-block: var(--space-3xs); /* touch target ≥ 24px */
+  border-bottom: var(--border-width) solid var(--color-line-strong);
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+
 @media (min-width: 768px) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -239,6 +248,10 @@
 
   .project-card__media:hover .project-card__screen {
     transform: translateY(-6px);
+  }
+
+  .project-card__repo:hover {
+    color: var(--color-text);
   }
 }
 
