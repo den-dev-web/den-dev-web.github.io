@@ -1,0 +1,4 @@
+# HTTP → HTTPS is handled by the hosting panel; only www → apex here
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.denivanchenko\.com$ [NC]
+RewriteRule ^(.*)$ https://denivanchenko.com/$1 [R=301,L]
