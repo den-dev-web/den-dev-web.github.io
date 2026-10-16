@@ -227,6 +227,15 @@
   font-size: var(--text-xs);
 }
 
+/* Card without a repo link: an empty box of the link's size keeps the tags in line with the row */
+.project-card__info--no-repo::after {
+  content: "\00a0";
+  margin-top: var(--space-s);
+  padding-block: var(--space-3xs);
+  border-bottom: var(--border-width) solid transparent;
+  font-size: var(--text-xs);
+}
+
 @media (min-width: 768px) {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
